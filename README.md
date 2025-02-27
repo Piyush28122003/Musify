@@ -24,3 +24,8 @@ Java
 XML for UI design
 
 
+
+
+##⚠️ Note
+
+The app currently does not include music logos and images.
