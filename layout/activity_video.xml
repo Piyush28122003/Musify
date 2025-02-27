@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".VideoActivity">
+
+    <!-- VideoView for playing videos -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <!-- Buttons for playing specific videos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/videoView"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnApnaBanaLe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apna Bana Le"
+            android:background="#FF0099FF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnTutaHaiPullWaha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tuta Hai Pull Waha"
+            android:background="#FF0099FF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnTumSeHi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tum Se Hi"
+            android:background="#FF0099FF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <!-- Home Button -->
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home"
+        android:background="@android:color/transparent"
+        android:contentDescription="Home Button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>

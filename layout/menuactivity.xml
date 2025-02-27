@@ -1,0 +1,4 @@
+<activity android:name=".MenuActivity"
+    android:exported="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+</activity>

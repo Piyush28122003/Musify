@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MUSIFY"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#FF0099FF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/songImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/appTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img1"/>
+
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song Title"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/songImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/songTitle"
+        android:layout_above="@id/seekBar"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btnDespacito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Despacito"
+                android:textColor="#FFFFFF"
+                android:background="#FF0099FF"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnShapeOfYou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shape Of You"
+                android:textColor="#FFFFFF"
+                android:background="#FF0099FF"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnMercy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mercy"
+                android:textColor="#FFFFFF"
+                android:background="#FF0099FF"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnLetMeLoveYou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Let Me Love You"
+                android:textColor="#FFFFFF"
+                android:background="#FF0099FF"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnDaruBadnaam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daru Badnaam"
+                android:textColor="#FFFFFF"
+                android:background="#FF0099FF"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnBackbone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Backbone"
+                android:textColor="#FFFFFF"
+                android:background="#FF0099FF"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btn3Peg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3 Peg"
+                android:textColor="#FFFFFF"
+                android:background="#FF0099FF"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Buttons for Play, Pause, Next, Previous -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/btnPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_next"
+            android:contentDescription="Previous"/>
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play"
+            android:contentDescription="Play" />
+
+        <ImageButton
+            android:id="@+id/btnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_pause"
+            android:contentDescription="Pause"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_previous"
+            android:contentDescription="Next" />
+
+    </LinearLayout>
+
+    <!-- Button to go back to the main menu -->
+    <ImageButton
+        android:id="@+id/btnToMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Back to Main Menu"
+        android:src="@drawable/ic_home"
+        android:layout_above="@id/btnPrevious" />
+
+    <!-- SeekBar for song progress -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="60dp"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seekbar_thumb" />
+
+</RelativeLayout>
